@@ -38,3 +38,8 @@
 @mixin extrabold() {
   font-weight: 800;
 }
+
+@include font('bitter', 'regular', '400');
+@include font('bitter', 'bold', '700');
+@include font('bitter', 'bolditalic', '700', $style: 'italic');
+@include font('bitter', 'italic', '400', $style: 'italic');

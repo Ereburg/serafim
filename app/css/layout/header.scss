@@ -1,0 +1,60 @@
+.header {
+  color: $color-text-main;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 232px 1fr 278px;
+    grid-template-rows: 172px;
+    align-content: center;
+    gap: 65px;
+  }
+
+  &__brand {
+    margin-top: 23px;
+
+    h2 {
+      align-self: center;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 38px;
+      font-weight: normal;
+    }
+  }
+
+  &__extra {
+    align-self: center;
+    display: grid;
+    gap: 14px;
+    grid-template-rows: auto;
+    margin-top: 23px;
+    color: $color-text-gray;
+  }
+
+  .actions, .extra-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #main-search {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-search {
+    display: inline-block;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+  }
+
+
+  &__bottom {
+    background-color: $color-gray;
+  }
+}
