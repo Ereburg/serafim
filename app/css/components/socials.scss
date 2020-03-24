@@ -1,14 +1,14 @@
 .socials {
   display: grid;
   justify-content: flex-end;
-  grid-template-columns: repeat(auto-fit, minmax(36px, 38px));
-  grid-template-rows: 38px;
-  gap: 5px;
+  grid-template-columns: repeat(auto-fit, $social-item-value);
+  grid-template-rows: $social-item-value;
+  gap: 10px;
 
   &__item {
     position: relative;
-    width: 38px;
-    height: 38px;
+    width: 100%;
+    height: 100%;
   }
 
   &__link {
@@ -21,8 +21,8 @@
   }
 
   .icon {
-    max-width: 18px;
-    max-height: 18px;
+    max-width: $social-icon-value;
+    max-height: $social-icon-value;
     height: auto;
     color: #CCCCCC;
   }

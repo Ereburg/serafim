@@ -7,18 +7,14 @@
         {{>components/image-fit img="header/logo" fallback-ext="png"}}
       </div>
       <div class="header__brand">
-        <h2>Приход преподобного<br>Серафима Саровского</h2>
+        <h1 class="header__title">Приход преподобного<br>Серафима Саровского</h1>
         <span>г. Минск, Белорусская Православная Церковь Московского Патриархата</span>
       </div>
       <div class="header__extra">
         <div class="header__extra-row">
           <div class="actions">
             <a href="#" class="link--text" id="main-search">
-              <img class="lazy icon-search"
-                   data-sizes="auto"
-                   data-original="../assets/images/header/search.png"
-                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                   alt="">
+              {{>ui/svg name="search"}}
               Поиск
             </a>
             <button class="link--text" type="button" id="main-entrance">Вход / Регистрация</button>
@@ -27,7 +23,7 @@
         <div class="header__extra-row">
           <div class="extra-links">
             <a href="#" class="link--text">Контакты</a>
-            <a href="#" class="btn btn-primary btn--funds">Пожертвования</a>
+            {{>ui/btn color="primary" mix="btn--funds" label="Пожертвования"}}
           </div>
         </div>
         <div class="header__extra-row">
@@ -45,5 +41,3 @@
     </div>
   </div>
 </header>
-
-<main class="page__content">

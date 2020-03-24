@@ -1,6 +1,8 @@
 .page {
   display: flex;
   justify-content: center;
+  @include font-base;
+  background-color: $color-bg-main;
 
   &__inner {
     display: flex;
@@ -20,5 +22,21 @@
 
   &__footer {
     flex-shrink: 0;
+  }
+
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    flex: 1 0 auto;
+    min-height: 1px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__aside {
+    flex: 1 0 auto;
+    min-height: 1px;
   }
 }

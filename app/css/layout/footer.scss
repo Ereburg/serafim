@@ -1,0 +1,71 @@
+.footer {
+  background-color: $color-white;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 600px repeat(2, 270px);
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__address {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 50px;
+  }
+
+  .btn--funds {
+    padding: 4px 27.5px;
+    margin: 20px auto 25px;
+
+    &:hover {
+      background: $color-primary;
+    }
+  }
+
+  .nav-menu {
+    @include font-sm;
+    color: $color-text-gray;
+    line-height: 26px;
+  }
+
+  &__credits {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .timetable {
+    margin-top: 15px;
+  }
+
+  &__copy {
+    margin-top: auto;
+    @include font-sm;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.address {
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+
+  a {
+    font-style: normal;
+  }
+}

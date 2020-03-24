@@ -86,6 +86,12 @@
     }
   }
 
+  &-muted {
+    background-color: $color-muted;
+    border-color: $color-muted;
+    color: #ffffff;
+  }
+
   &-small {
     font-size: 14px;
     line-height: 18px;

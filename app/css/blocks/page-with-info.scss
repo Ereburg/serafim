@@ -1,0 +1,32 @@
+.post {
+  padding: 20px 25px;
+  background-color: $color-white;
+
+  &__title {
+    max-width: 75%;
+    @include font-post-title;
+  }
+
+  &__statistics {
+    color: $color-muted;
+    font-style: italic;
+
+    .icon-eye {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__views {
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+  &__text {
+    max-width: 95%;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}
