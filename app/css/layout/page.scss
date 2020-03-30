@@ -27,12 +27,12 @@
   &__container {
     position: relative;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3.3fr 1fr;
     gap: 40px;
     flex: 1 0 auto;
     min-height: 1px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 67px;
   }
 
   &__aside {

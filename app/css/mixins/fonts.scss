@@ -81,3 +81,17 @@ $font_file_path: $fonts_dir + $family;
   line-height: 1.3;
   font-weight: bold;
 }
+
+
+@mixin font-related-title () {
+  font-size: $font-related-title;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+
+@mixin font-related-text () {
+  font-size: $font-related-text;
+  line-height: 30px;
+  font-weight: bold;
+}

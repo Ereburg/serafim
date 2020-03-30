@@ -10,16 +10,17 @@
   &__statistics {
     color: $color-muted;
     font-style: italic;
-
-    .icon-eye {
-      width: 13px;
-      height: 13px;
-    }
   }
 
   &__views {
     display: inline-block;
     margin-left: 50px;
+    font-size: 16px;
+
+    .icon-eye {
+      width: 13px;
+      height: 13px;
+    }
   }
 
   &__text {
@@ -29,4 +30,40 @@
       margin-top: 30px;
     }
   }
+
+  &__tags {
+    margin-top: 40px;
+    font-size: 13px;
+    line-height: 30px;
+    color: $color-muted;
+
+    a {
+      color: $color-text-gray;
+
+      &:not(:last-child)::after {
+        content: ',';
+        display: inline;
+      }
+    }
+  }
+
+  &__image {
+    margin-top: 30px;
+
+    &__caption {
+      font-style: italic;
+      font-size: 16px;
+      line-height: 30px;
+      color: $color-muted;
+      text-align: center;
+    }
+
+    &--caption {
+      + .post__text {
+        margin-top: 10px;
+      }
+    }
+  }
 }
+
+
