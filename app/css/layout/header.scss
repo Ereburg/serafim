@@ -1,5 +1,6 @@
 .header {
   color: $color-text-main;
+  background: $color-white;
 
   &__top {
     display: grid;
@@ -7,15 +8,54 @@
     grid-template-rows: 172px;
     align-content: center;
     gap: 65px;
+
+    @include tablet-and-mobile {
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+      grid-template-rows: auto;
+      gap: 20px;
+      padding: 20px 0;
+    }
+  }
+
+  &__logo {
+    @include mobile {
+      display: none;
+    }
+
+    .image-fit {
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 172px;
+      }
+
+      img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   &__brand {
     margin-top: 23px;
+    @include mobile {
+      margin-top: 0;
+    }
 
     span {
       font-size: 16px;
       line-height: 38px;
       font-weight: normal;
+
+      @include tablet-and-mobile {
+        font-size: 13px;
+        line-height: 1.2;
+      }
     }
   }
 
@@ -23,7 +63,15 @@
     align-self: center;
     font-weight: bold;
     font-size: 40px;
-    line-height: 47px;
+    line-height: 1.1;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__extra {
@@ -33,6 +81,16 @@
     grid-template-rows: auto;
     margin-top: 23px;
     color: $color-text-gray;
+
+    @include tablet-and-mobile {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 2;
+    background-color: $color-gray;
   }
 
   .actions, .extra-links {
@@ -53,43 +111,6 @@
     height: 14px;
   }
 
-  &__logo {
-    .image-fit {
-      position: relative;
-
-      &::before {
-        content: '';
-        display: block;
-        padding-top: 172px;
-      }
-
-      img{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  &__bottom {
-    position: relative;
-    z-index: 2;
-    background-color: $color-gray;
-  }
-
-  &__nav {
-    .nav-menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      justify-content: space-between;
-      align-items: center;
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: bold;
-      height: 70px;
-    }
-  }
-
+  //&__nav {
+  //}
 }

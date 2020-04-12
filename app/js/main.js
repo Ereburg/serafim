@@ -6,6 +6,7 @@ import './src/utils/scroll-control';
 import './src/utils/preloader';
 
 import './src/widgets/popups';
+import './src/widgets/sliders';
 
 import './src/app';
 

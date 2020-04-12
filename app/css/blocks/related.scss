@@ -10,6 +10,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: $main-gutters;
     margin-top: 25px;
+
+    @include tablet-and-mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   li {

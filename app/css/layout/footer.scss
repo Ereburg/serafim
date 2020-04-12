@@ -7,6 +7,26 @@
     gap: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__map {
+    @include tablet-and-mobile {
+      grid-column: 1 / -1;
+
+      iframe {
+        width: 100%;
+        min-height: 100%;
+      }
+    }
+
   }
 
   &__address {
@@ -15,7 +35,22 @@
     align-items: flex-start;
     flex-direction: column;
     padding-right: 50px;
+
+    @include tablet-and-mobile {
+      padding-right: 0;
+    }
   }
+
+  &__credits {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copy {
+    margin-top: auto;
+    @include font-sm;
+  }
+
 
   .btn--funds {
     padding: 4px 27.5px;
@@ -32,22 +67,12 @@
     line-height: 26px;
   }
 
-  &__credits {
-    display: flex;
-    flex-direction: column;
-  }
-
   .socials {
     justify-content: flex-start;
   }
 
   .timetable {
     margin-top: 15px;
-  }
-
-  &__copy {
-    margin-top: auto;
-    @include font-sm;
   }
 }
 
